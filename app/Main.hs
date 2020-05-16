@@ -1,6 +1,6 @@
 module Main where
 
-import PascalsTriangle
+import StringCompression
 
 amountGoodStudents:: [Int] -> Int
 amountGoodStudents ls = length (filter (>10) ls)
@@ -19,6 +19,6 @@ getNamesOfGoodStudents ls = filter isGoodStudent ls
 
 main :: IO ()
 main = do
-      let l = "Hallo was geht?"
-      print (createPascalsTriangle 10)
+      let l = "Schifffahrt"
+      print (compress "lllllllllllleeeeeeeeooooooooonnnnn")
 

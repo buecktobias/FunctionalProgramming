@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 37e6fc17b0a2e975feb6deaea6fd06fe8adfefb152f9a2d53b909fd602e41885
+-- hash: 02f40e4feda6b62a88478cbcf7f7a95220af9a2f9f64d60e0de71271b39ce393
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       PascalsTriangle
       Some
       Square
+      StringCompression
       StringPermute
   other-modules:
       Paths_FunctionalProgramming
