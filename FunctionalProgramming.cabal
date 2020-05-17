@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 02f40e4feda6b62a88478cbcf7f7a95220af9a2f9f64d60e0de71271b39ce393
+-- hash: 131403e869b1b3a3decf3059370fdd9f4ab99ba573167dd3c9da7702a5c4dc24
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -32,6 +32,7 @@ library
       Geometry
       Integral
       PascalsTriangle
+      PrefixCompression
       Some
       Square
       StringCompression

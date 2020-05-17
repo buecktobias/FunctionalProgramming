@@ -1,6 +1,6 @@
 module Main where
 
-import StringCompression
+import PrefixCompression
 
 amountGoodStudents:: [Int] -> Int
 amountGoodStudents ls = length (filter (>10) ls)
@@ -19,6 +19,10 @@ getNamesOfGoodStudents ls = filter isGoodStudent ls
 
 main :: IO ()
 main = do
-      let l = "Schifffahrt"
-      print (compress "lllllllllllleeeeeeeeooooooooonnnnn")
+      let l = "leonlol"
+      let l2 = "leonlacht"
+      let pre = findPrefix l l2
+      print (removePrefix pre l )
+      print (removePrefix pre l2 )
+      print ( pre )
 
