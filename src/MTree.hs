@@ -28,3 +28,5 @@ data Edge = Edge{n1:: Node, n2::Node, cost::Int}
 
 data Node = Node{edges::[Edge], nValue::Int}
 
+djikstra:: Int -> Int -> ([Int], Int)
+djikstra from to = ([] ,from)

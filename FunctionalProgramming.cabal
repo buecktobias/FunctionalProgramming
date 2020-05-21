@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 16d8da1a9562fd505726a8fe421e6aff1a2a59a7145b5b7344062e846e9c7f9f
+-- hash: 5df314646c8ee358bd7771494aa3f4562f44c677d94f48ceccf57260b5e98233
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -39,7 +39,9 @@ library
       Square
       StringCompression
       StringPermute
+      StringReduction
       Students
+      SumOfPowers
   other-modules:
       Paths_FunctionalProgramming
   hs-source-dirs:

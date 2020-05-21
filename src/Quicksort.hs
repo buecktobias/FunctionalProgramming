@@ -47,6 +47,18 @@ mInsert e ls
              | otherwise= mInsert e (init ls) ++ [last ls]
 
 
+binarySearch:: (Ord a) => [a] -> a -> Maybe Int
+binarySearch [] e = Nothing
+binarySearch ls e 
+                | e == midElem = Just half
+                | e < midElem = binarySearch (fst splitted) e
+                | e > midElem =  binarySearch (snd splitted) e
+                where 
+                half = floor ((fromIntegral (length ls)) / (fromIntegral 2)) :: Int
+                splitted = splitAt half ls
+                midElem = ls !! half
+                 
+
 insertionSort:: (Ord a) => [a] -> [a]
 insertionSort [] = []
 insertionSort [x] = [x]
@@ -62,3 +74,27 @@ insertionSort' ls n
                     in
                     insertionSort' ((mInsert  (ls !! n)  firstPart) ++  lastPart) (n + 1)
                     | otherwise = init ls
+
+minElement:: [Int] -> Int
+minElement xs = minElement' xs 9999 0 0
+
+minElement':: [Int] -> Int -> Int -> Int -> Int
+minElement' []  minE minI currentI = minI
+minElement' (x:ls) minE minI currentI
+                      | minE <= x = minElement' ls minE minI (currentI + 1)
+                      | minE > x = minElement' ls x currentI (currentI + 1)
+
+removeIndex:: [a]  -> Int -> [a]
+removeIndex ls x =
+                let splitted = splitAt x ls
+                in fst splitted ++ tail (snd splitted)
+ 
+selectionSort:: [Int] -> [Int]
+selectionSort [] = []
+selectionSort [x] = [x]
+selectionSort ls = let
+                   minIndex = minElement ls
+                   in
+                   [ls !! minIndex] ++ (selectionSort (removeIndex ls minIndex))
+
+
