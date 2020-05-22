@@ -22,11 +22,32 @@ addElement t n
                | n < (value t) = if isNothing (leftTree t) then setLeftTree t (creteTree n) else addElement (unMaybe (leftTree t)) n
                | otherwise= if isNothing (rightTree t) then setRightTree t (creteTree n) else addElement (unMaybe (rightTree t)) n
 
-data Graph = Graph {node::[Node]}
+data Graph = Graph {nodes::[Node]} deriving Show
 
-data Edge = Edge{n1:: Node, n2::Node, cost::Int}
+getNode:: Int -> Graph -> Node
+getNode n1 g = head (filter (\n -> nValue n == n1) (nodes g))
 
-data Node = Node{edges::[Edge], nValue::Int}
+addNode:: Node -> Graph -> Graph
+addNode n g= g {nodes = (nodes g) ++ [n]}
 
-djikstra:: Int -> Int -> ([Int], Int)
-djikstra from to = ([] ,from)
+data Node = Node{neighbours::[Node], nValue::Int} deriving Show
+
+createNode:: Int -> Node
+createNode n = Node [] n
+
+bfs:: Node -> Int -> [Node]
+bfs n dest 
+  | (nValue n) == dest = [n]
+  | otherwise= 
+              let
+              bfsss = (map (\x -> bfs x dest)( neighbours n))
+              bfsssLengths = map length bfsss
+              shortestLength = if length bfsssLengths == 0 then 0 else  minimum bfsssLengths
+              shortestPath = if length bfsssLengths == 0 then [] else head (filter (\x -> length x == shortestLength) bfsss)
+              in
+              [n] ++ shortestPath
+
+addEdge:: Node -> Node -> (Node, Node)
+addEdge n1 n2 = (n1 {neighbours = ((neighbours n1) ++ [n2])}, n2 {neighbours = ((neighbours n2) ++ [n1])})
+
+

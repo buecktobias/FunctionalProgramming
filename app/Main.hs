@@ -1,9 +1,8 @@
 module Main where
-import StringReduction
+import SubStringSearching
 
 main :: IO ()
 main = do
-      print (reduction "abbbeeeedfffaaaaa")
-
+      print(isSubString "lola" "Hahahahahahaha lol hahaha")
 
 
