@@ -7,15 +7,13 @@ isPasswordPrefix prefix text =
                               else 
                               False
 
-isCorrectPassword:: String -> [String] -> [String]
-isCorrectPassword [] passwords = []
-isCorrectPassword text passwords = if (length prefixPasswords) == 0 then [] 
+isCorrectPassword:: String -> [String] -> ([String], Bool)
+isCorrectPassword [] passwords = ([], True)
+isCorrectPassword text passwords = if (length prefixPasswords) == 0 then ([], False)
                                   else 
                                   let 
-                                  pass = head prefixPasswords
-                                  newText = drop (length pass) text
                                   in
-                                  [pass] ++ (isCorrectPassword newText passwords)
+                                  head (filter (\x -> snd x) (map (\x -> let correctPassword=isCorrectPassword (drop (length x) text) passwords in ([x] ++ fst correctPassword, snd correctPassword) ) prefixPasswords))
                                   where  
                                   prefixPasswords = filter (\x -> isPasswordPrefix x text) passwords
 

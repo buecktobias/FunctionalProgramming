@@ -3,7 +3,5 @@ import PasswordCracker
 
 main :: IO ()
 main = do
-      let passwords = ["because","wedow", "can", "do", "must", "we", "what"]
+      let passwords = ["hat" ,"because", "can", "do", "must", "we", "what"]
       print(isCorrectPassword "wedowhatwemustbecausewecan" passwords)
-
-
