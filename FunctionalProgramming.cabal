@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9a4f6e52ae84b306e6aaee7a6277859c8a1ca69c47e9f007edfa43de499d1b8c
+-- hash: 75ce4c04f75a15f2bbd8b553d9612fb7a8d78c290310e335646cde616934d9cb
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -33,6 +33,7 @@ library
       Integral
       MTree
       PascalsTriangle
+      PasswordCracker
       PrefixCompression
       Quicksort
       Some
