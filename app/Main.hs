@@ -1,7 +1,7 @@
 module Main where
-import PasswordCracker
+import SubSequence
 
 main :: IO ()
 main = do
-      let passwords = ["hat" ,"because", "can", "do", "must", "we", "what"]
-      print(isCorrectPassword "wedowhatwemustbecausewecan" passwords)
+      let passwords = "hahaha xD lol was geht ab yolo"
+      print(isSubSequence "hxmjkkllwal" passwords)
