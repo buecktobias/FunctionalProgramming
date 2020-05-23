@@ -1,7 +1,8 @@
 module Main where
-import SubSequence
+import ClimbingTheLeaderboard
 
 main :: IO ()
 main = do
-      let passwords = "hahaha xD lol was geht ab yolo"
-      print(isSubSequence "hxmjkkllwal" passwords)
+      let ranks = [100, 100, 50, 40, 40, 20, 10]
+      let ls = [5, 25, 50, 120]
+      print(indexOf ls 50)

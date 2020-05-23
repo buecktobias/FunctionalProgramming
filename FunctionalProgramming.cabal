@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b085412c854c811864129d30783da1ba4f3e4e26a9d55975c8fb6d18d056065b
+-- hash: 213341d78dff3a6adc5bfb5a07a5b7a18c0cd43d4c969b14e52188a2d872b70b
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -27,10 +27,12 @@ source-repository head
 
 library
   exposed-modules:
+      ClimbingTheLeaderboard
       Factorial
       Fibonacci
       Geometry
       Integral
+      MagicalSquare
       MTree
       PascalsTriangle
       PasswordCracker
