@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 213341d78dff3a6adc5bfb5a07a5b7a18c0cd43d4c969b14e52188a2d872b70b
+-- hash: e79caa23aa039a087dadb76c50b98282fd534bad8ca209cc2f5093bdd195125b
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       Integral
       MagicalSquare
       MTree
+      NonDivisibleSubset
       PascalsTriangle
       PasswordCracker
       PrefixCompression
