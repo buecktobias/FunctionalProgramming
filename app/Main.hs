@@ -1,7 +1,8 @@
 module Main where
-import NonDivisibleSubset
+import KathisAufgabe
 
 main :: IO ()
 main = do
-      let ranks = [19,10,12,10,24,25,22]
-      print(nonDivisibleSubSet ranks 3)
+        let matrix = [[1,2], [2, 4]]
+        let newColumn = [2, 5]
+        print(getAllCombis 3)

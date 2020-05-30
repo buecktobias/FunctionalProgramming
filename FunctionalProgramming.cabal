@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e79caa23aa039a087dadb76c50b98282fd534bad8ca209cc2f5093bdd195125b
+-- hash: 373ab0c838a1dc0c16a1cde5589325c1fa460dd28ad3d9c5477322e122ddb977
 
 name:           FunctionalProgramming
 version:        0.1.0.0
@@ -31,13 +31,16 @@ library
       Factorial
       Fibonacci
       Geometry
+      GridSearch
       Integral
+      KathisAufgabe
       MagicalSquare
       MTree
       NonDivisibleSubset
       PascalsTriangle
       PasswordCracker
       PrefixCompression
+      QueensAttack2
       Quicksort
       Some
       Square
